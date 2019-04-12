@@ -19,22 +19,24 @@ public class DataToFile {
 
     private final String COMMA_DELIMITER = ",";
     private final String NEW_LINE_SEPARATOR = "\n";
-    private final String FILE_HEADER = "name,country,area,elevation,population";
+    private final String FILE_HEADER = "Name,Country,Area,Elevation,Population";
 
     public void toPDF( String filePath, List<City> cities ) {
+        Document document = null;
         try {
-            Document document = new Document();
+            document = new Document();
             PdfWriter.getInstance( document, new FileOutputStream( filePath + File.separator + "cities.pdf"));
             document.open();
             for(City c : cities) {
                 document.add( new Chunk( c.toString() ));
                 document.add( new Paragraph(  ));
             }
-            document.close();
         } catch ( DocumentException e ) {
             e.printStackTrace();
         } catch ( FileNotFoundException e ) {
             e.printStackTrace();
+        } finally {
+            document.close();
         }
     }
 
@@ -55,26 +57,40 @@ public class DataToFile {
     }
 
     public void toExcel( String filePath, List<City> cities )  {
+        WritableWorkbook  writableWorkbook = null;
         try {
-            WritableWorkbook  writableWorkbook = Workbook.createWorkbook( new File( filePath + File.separator + "cities.xls" ) );
+            writableWorkbook = Workbook.createWorkbook( new File( filePath + File.separator + "cities.xls" ) );
             prepareDataForToExcel( writableWorkbook, cities );
             writableWorkbook.write();
-            writableWorkbook.close();
         } catch ( IOException e ) {
             e.printStackTrace();
         } catch ( WriteException e ) {
             e.printStackTrace();
+        } finally {
+            try {
+                writableWorkbook.close();
+            } catch ( IOException e ) {
+                e.printStackTrace();
+            } catch ( WriteException e ) {
+                e.printStackTrace();
+            }
         }
     }
 
     private void writeToFile( String filePath, String content) {
+        FileWriter writer = null;
         try {
-            FileWriter writer = new FileWriter( filePath );
+            writer = new FileWriter( filePath );
             writer.write( content );
-            writer.flush();
-            writer.close();
         } catch ( IOException e ) {
             throw new RuntimeException( e );
+        } finally {
+            try {
+                writer.flush();
+                writer.close();
+            } catch ( IOException e ) {
+                e.printStackTrace();
+            }
         }
     }
 

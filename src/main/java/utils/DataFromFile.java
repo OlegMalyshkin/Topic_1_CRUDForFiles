@@ -18,23 +18,42 @@ import java.util.List;
 public class DataFromFile {
 
     public List<City> getCityList(String filePath) {
-        String fileExtension = getFileExtension( filePath );
-        switch ( fileExtension ){
-            case "json": return fromJson(filePath);
-            case "xml": return fromXML(filePath);
-            case "xls": return fromExcel(filePath);
-            default: return null;
+        if( filePath != null || !filePath.equals( "" ) ) {
+            String fileExtension = getFileExtension( filePath );
+            if ( fileExtension != null ) {
+                switch ( fileExtension ) {
+                    case "json":
+                        return fromJson( filePath );
+                    case "xml":
+                        return fromXML( filePath );
+                    case "xls":
+                        return fromExcel( filePath );
+                    default:
+                        return null;
+                }
+            } else {
+                return null;
+            }
+        } else {
+            return null;
         }
     }
 
     private List<City> fromJson(String pathFile) {
         Gson gson = new Gson();
+        BufferedReader br = null;
         try {
-            BufferedReader br = new BufferedReader( new FileReader( pathFile));
+            br = new BufferedReader( new FileReader( pathFile));
             City[] citiesArray = gson.fromJson( br, City[].class );
-            return new ArrayList<City>( Arrays.asList( citiesArray ) );
+            return new ArrayList<>( Arrays.asList( citiesArray ) );
         } catch ( FileNotFoundException e ) {
             e.printStackTrace();
+        } finally {
+            try {
+                br.close();
+            } catch ( IOException e ) {
+                e.printStackTrace();
+            }
         }
         return null;
     }
