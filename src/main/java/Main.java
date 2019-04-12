@@ -15,7 +15,10 @@ public class Main {
 
         List<City> cities = new ArrayList<City>(  );
         cities.add(new City( "Kyiv", "Ukraine", 	847.66, 179,2950533L));
+        cities.add(new City( "Київ", "Україна", 	847.66, 179,2950533L));
+        cities.add(new City( "中國", "中國", 	2188.67, 40,13839910L));
         cities.add(new City( "New York", "USA", 	1213.37, 10,8175133L));
+        cities.add(new City( "Токио", "Япония", 	2188.67, 40,13839910L));
 
         DataToFile dataToFile = new DataToFile();
         dataToFile.toJson( "D:\\Documents\\IdeaProjects_Data", cities );
@@ -25,9 +28,9 @@ public class Main {
         dataToFile.toPDF( "D:\\Documents\\IdeaProjects_Data", cities );
 
         DataFromFile dataFromFile = new DataFromFile();
-        System.out.println(dataFromFile.getCityList( "D:\\Documents\\IdeaProjects_Data\\cities.json" ));
-        System.out.println(dataFromFile.getCityList( "D:\\Documents\\IdeaProjects_Data\\cities.xml"  ));
-        System.out.println(dataFromFile.getCityList( "D:\\Documents\\IdeaProjects_Data\\cities.xls"  ));
+        System.out.println("cities.json => " + dataFromFile.getCityList( "D:\\Documents\\IdeaProjects_Data\\cities.json" ));
+        System.out.println("cities.xml => " + dataFromFile.getCityList( "D:\\Documents\\IdeaProjects_Data\\cities.xml"  ));
+        System.out.println("cities.xls => " + dataFromFile.getCityList( "D:\\Documents\\IdeaProjects_Data\\cities.xls"  ));
     }
 
 }
