@@ -1,6 +1,8 @@
 package utils;
 
 import com.google.gson.Gson;
+import com.itextpdf.text.*;
+import com.itextpdf.text.pdf.PdfWriter;
 import com.thoughtworks.xstream.XStream;
 import entity.City;
 import jxl.Workbook;
@@ -9,11 +11,8 @@ import jxl.write.Number;
 import jxl.write.WritableSheet;
 import jxl.write.WritableWorkbook;
 import jxl.write.WriteException;
-import jxl.write.biff.RowsExceededException;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.List;
 
 public class DataToFile {
@@ -21,6 +20,23 @@ public class DataToFile {
     private final String COMMA_DELIMITER = ",";
     private final String NEW_LINE_SEPARATOR = "\n";
     private final String FILE_HEADER = "name,country,area,elevation,population";
+
+    public void toPDF( String filePath, List<City> cities ) {
+        try {
+            Document document = new Document();
+            PdfWriter.getInstance( document, new FileOutputStream( filePath + File.separator + "cities.pdf"));
+            document.open();
+            for(City c : cities) {
+                document.add( new Chunk( c.toString() ));
+                document.add( new Paragraph(  ));
+            }
+            document.close();
+        } catch ( DocumentException e ) {
+            e.printStackTrace();
+        } catch ( FileNotFoundException e ) {
+            e.printStackTrace();
+        }
+    }
 
     public void toXML( String filePath, List<City> cities ) {
         writeToFile(  filePath + File.separator + "cities.xml",
@@ -80,7 +96,7 @@ public class DataToFile {
     }
 
     private boolean prepareDataForToExcel(WritableWorkbook writableWorkbook, List<City> cities)
-            throws WriteException, IOException {
+            throws WriteException {
         int i = 1;
         WritableSheet writableSheet = writableWorkbook.createSheet( "City", 0 );
         writableSheet.addCell( new Label( 0, 0, "Name" ));

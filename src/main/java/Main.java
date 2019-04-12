@@ -22,6 +22,7 @@ public class Main {
         dataToFile.toXML( "D:\\Documents\\IdeaProjects_Data", cities );
         dataToFile.toCSV( "D:\\Documents\\IdeaProjects_Data", cities );
         dataToFile.toExcel( "D:\\Documents\\IdeaProjects_Data", cities );
+        dataToFile.toPDF( "D:\\Documents\\IdeaProjects_Data", cities );
 
         DataFromFile dataFromFile = new DataFromFile();
         System.out.println(dataFromFile.getCityList( "D:\\Documents\\IdeaProjects_Data\\cities.json" ));
