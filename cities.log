@@ -1,3 +1,4 @@
-15/04/2019 - 12:43:52 | INFO  | utils.DataToFile.toJson(DataToFile.java:56) -> toJson() -> File cities.json in folder D:\Documents\IdeaProjects_Data was created
-15/04/2019 - 12:43:53 | INFO  | utils.DataToFile.toXML(DataToFile.java:50) -> toXML() -> File cities.xml in folder D:\Documents\IdeaProjects_Data was created
-15/04/2019 - 12:43:53 | INFO  | utils.DataToFile.toExcel(DataToFile.java:72) -> toExcel() -> File cities.xls in folder D:\Documents\IdeaProjects_Data was created
+15/04/2019 - 13:24:53 | INFO  | utils.DataToFile.toJson(DataToFile.java:56) -> toJson() -> File cities.json in folder D:\Documents\IdeaProjects_Data was created
+15/04/2019 - 13:24:53 | INFO  | utils.DataToFile.toXML(DataToFile.java:50) -> toXML() -> File cities.xml in folder D:\Documents\IdeaProjects_Data was created
+15/04/2019 - 13:24:54 | INFO  | utils.DataToFile.toExcel(DataToFile.java:72) -> toExcel() -> File cities.xls in folder D:\Documents\IdeaProjects_Data was created
+15/04/2019 - 13:24:54 | ERROR | utils.DataFromFile.getCityList(DataFromFile.java:39) -> getCityList() -> java.lang.NullPointerException

@@ -48,12 +48,6 @@ public class ReadFromFileTestCase {
         assertEquals( Arrays.toString( prepareListForWrite().toArray() ), Arrays.toString( cities.toArray() ) );
     }
 
-    @Test(expectedExceptions = NullPointerException.class)
-    public void checkReadDataFromFileWithNullPathFile(){
-        dataFromFile = new DataFromFile();
-        List<City> cities = dataFromFile.getCityList( null );
-        assertEquals( null , cities );
-    }
 
     @Test
     public void checkReadDataFromFileWithoutExtension(){
@@ -73,6 +67,13 @@ public class ReadFromFileTestCase {
     public void checkReadDataFromEmptyFilePath(){
         dataFromFile = new DataFromFile();
         List<City> cities = dataFromFile.getCityList("" );
+        assertEquals( null , cities );
+    }
+
+    @Test
+    public void checkReadDataFromNullFilePath(){
+        dataFromFile = new DataFromFile();
+        List<City> cities = dataFromFile.getCityList(null );
         assertEquals( null , cities );
     }
 
