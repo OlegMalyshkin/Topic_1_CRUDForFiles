@@ -21,7 +21,7 @@ public class DataFromFile {
     private static Logger LOG = Logger.getLogger( DataFromFile.class );
 
     public List<City> getCityList(String filePath) {
-        if( filePath != null || !filePath.equals( "" ) ) {
+        try {
             String fileExtension = getFileExtension( filePath );
             if ( fileExtension != null ) {
                 switch ( fileExtension ) {
@@ -31,15 +31,14 @@ public class DataFromFile {
                         return fromXML( filePath );
                     case "xls":
                         return fromExcel( filePath );
-                    default:
-                        return null;
                 }
             } else {
                 return null;
             }
-        } else {
-            return null;
+        } catch ( NullPointerException e ){
+            LOG.error( e );
         }
+        return null;
     }
 
     private List<City> fromJson(String pathFile) {
