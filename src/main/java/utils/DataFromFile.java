@@ -9,6 +9,7 @@ import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
 import jxl.read.biff.SheetImpl;
+import org.apache.log4j.Logger;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -16,6 +17,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class DataFromFile {
+
+    private static Logger LOG = Logger.getLogger( DataFromFile.class );
 
     public List<City> getCityList(String filePath) {
         if( filePath != null || !filePath.equals( "" ) ) {
@@ -47,12 +50,12 @@ public class DataFromFile {
             City[] citiesArray = gson.fromJson( br, City[].class );
             return new ArrayList<>( Arrays.asList( citiesArray ) );
         } catch ( FileNotFoundException e ) {
-            e.printStackTrace();
+            LOG.error( e );
         } finally {
             try {
                 br.close();
             } catch ( IOException e ) {
-                e.printStackTrace();
+                LOG.error( e );
             }
         }
         return null;
@@ -67,9 +70,9 @@ public class DataFromFile {
             workbook.close();
             return cities;
         } catch ( IOException e ) {
-            e.printStackTrace();
+            LOG.error( e );
         } catch ( BiffException e ) {
-            e.printStackTrace();
+            LOG.error( e );
         }
         return  null;
     }
@@ -81,7 +84,7 @@ public class DataFromFile {
             List<City> cities = objectMapper.readValue( xml, new TypeReference<List<City>>() {} );
             return cities;
         } catch ( IOException e ) {
-            e.printStackTrace();
+            LOG.error( e );
         }
         return null;
     }

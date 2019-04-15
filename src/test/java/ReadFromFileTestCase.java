@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.testng.Assert.*;
 
 public class ReadFromFileTestCase {
 
@@ -48,6 +48,13 @@ public class ReadFromFileTestCase {
         assertEquals( Arrays.toString( prepareListForWrite().toArray() ), Arrays.toString( cities.toArray() ) );
     }
 
+    @Test(expectedExceptions = NullPointerException.class)
+    public void checkReadDataFromFileWithNullPathFile(){
+        dataFromFile = new DataFromFile();
+        List<City> cities = dataFromFile.getCityList( null );
+        assertEquals( null , cities );
+    }
+
     @Test
     public void checkReadDataFromFileWithoutExtension(){
         dataFromFile = new DataFromFile();
@@ -59,6 +66,13 @@ public class ReadFromFileTestCase {
     public void checkReadDataFromFileWithDot(){
         dataFromFile = new DataFromFile();
         List<City> cities = dataFromFile.getCityList( FILE_PATH + File.separator + "cities." );
+        assertEquals( null , cities );
+    }
+
+    @Test
+    public void checkReadDataFromEmptyFilePath(){
+        dataFromFile = new DataFromFile();
+        List<City> cities = dataFromFile.getCityList("" );
         assertEquals( null , cities );
     }
 

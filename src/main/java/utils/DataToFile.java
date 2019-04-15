@@ -11,11 +11,14 @@ import jxl.write.Number;
 import jxl.write.WritableSheet;
 import jxl.write.WritableWorkbook;
 import jxl.write.WriteException;
+import org.apache.log4j.Logger;
 
 import java.io.*;
 import java.util.List;
 
 public class DataToFile {
+
+    private static Logger LOG = Logger.getLogger( DataToFile.class );
 
     private final String COMMA_DELIMITER = ",";
     private final String NEW_LINE_SEPARATOR = "\n";
@@ -31,10 +34,11 @@ public class DataToFile {
                 document.add( new Chunk( c.toString() ));
                 document.add( new Paragraph(  ));
             }
+            LOG.info( "File cities.pdf in folder " + filePath + " was created" );
         } catch ( DocumentException e ) {
-            e.printStackTrace();
+            LOG.error( e );
         } catch ( FileNotFoundException e ) {
-            e.printStackTrace();
+            LOG.error( e );
         } finally {
             document.close();
         }
@@ -43,16 +47,19 @@ public class DataToFile {
     public void toXML( String filePath, List<City> cities ) {
         writeToFile(  filePath + File.separator + "cities.xml",
                       new XStream().toXML( cities ) );
+        LOG.info( "File cities.xml in folder " + filePath + " was created" );
     }
 
     public void toJson( String filePath, List<City> cities )  {
         writeToFile(  filePath + File.separator + "cities.json",
                       new Gson().toJson( cities ) );
+        LOG.info( "File cities.json in folder " + filePath + " was created" );
     }
 
     public void toCSV( String filePath, List<City> cities ) {
         writeToFile( filePath + File.separator + "cities.csv",
                      prepareDataForToCSV( cities ) );
+        LOG.info( "File cities.csv in folder " + filePath + " was created" );
 
     }
 
@@ -62,17 +69,18 @@ public class DataToFile {
             writableWorkbook = Workbook.createWorkbook( new File( filePath + File.separator + "cities.xls" ) );
             prepareDataForToExcel( writableWorkbook, cities );
             writableWorkbook.write();
+            LOG.info( "File cities.xls in folder " + filePath + " was created" );
         } catch ( IOException e ) {
-            e.printStackTrace();
+            LOG.error( e );
         } catch ( WriteException e ) {
-            e.printStackTrace();
+            LOG.error( e );
         } finally {
             try {
                 writableWorkbook.close();
             } catch ( IOException e ) {
-                e.printStackTrace();
+                LOG.error( e );
             } catch ( WriteException e ) {
-                e.printStackTrace();
+                LOG.error( e );
             }
         }
     }
@@ -83,13 +91,13 @@ public class DataToFile {
             writer = new FileWriter( filePath );
             writer.write( content );
         } catch ( IOException e ) {
-            throw new RuntimeException( e );
+            LOG.error( e );
         } finally {
             try {
                 writer.flush();
                 writer.close();
             } catch ( IOException e ) {
-                e.printStackTrace();
+                LOG.error( e );
             }
         }
     }
