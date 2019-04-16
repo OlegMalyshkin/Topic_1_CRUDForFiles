@@ -4,11 +4,10 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.google.gson.Gson;
 import entity.City;
-import jxl.Cell;
 import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
-import jxl.read.biff.SheetImpl;
+import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Logger;
 
 import java.io.*;
@@ -18,49 +17,42 @@ import java.util.List;
 
 public class DataFromFile {
 
-    private static Logger LOG = Logger.getLogger( DataFromFile.class );
+    private static Logger log = Logger.getLogger( DataFromFile.class );
 
-    public List<City> getCityList(String filePath) {
-        try {
-            String fileExtension = getFileExtension( filePath );
-            if ( fileExtension != null ) {
-                switch ( fileExtension ) {
-                    case "json":
-                        return fromJson( filePath );
-                    case "xml":
-                        return fromXML( filePath );
-                    case "xls":
-                        return fromExcel( filePath );
-                }
-            } else {
-                return null;
-            }
-        } catch ( NullPointerException e ){
-            LOG.error( e );
+    public List<City> getCityList( String filePath ) {
+        String fileExtension = FilenameUtils.getExtension( filePath );
+        switch ( fileExtension ) {
+            case "json":
+                return fromJson( filePath );
+            case "xml":
+                return fromXML( filePath );
+            case "xls":
+                return fromExcel( filePath );
+            default:
+                throw new RuntimeException();
         }
-        return null;
     }
 
-    private List<City> fromJson(String pathFile) {
+    private List<City> fromJson( String pathFile ) {
         Gson gson = new Gson();
-        BufferedReader br = null;
+        BufferedReader reader = null;
         try {
-            br = new BufferedReader( new FileReader( pathFile));
-            City[] citiesArray = gson.fromJson( br, City[].class );
+            reader = new BufferedReader( new FileReader( pathFile ) );
+            City[] citiesArray = gson.fromJson( reader, City[].class );
             return new ArrayList<>( Arrays.asList( citiesArray ) );
         } catch ( FileNotFoundException e ) {
-            LOG.error( e );
+            log.error( e );
         } finally {
             try {
-                br.close();
+                reader.close();
             } catch ( IOException e ) {
-                LOG.error( e );
+                log.error( e );
             }
         }
         return null;
     }
 
-    private List<City> fromExcel(String pathFile){
+    private List<City> fromExcel( String pathFile ) {
         List<City> cities = null;
         Workbook workbook = null;
         try {
@@ -68,12 +60,10 @@ public class DataFromFile {
             cities = getDataFromExcel( workbook );
             workbook.close();
             return cities;
-        } catch ( IOException e ) {
-            LOG.error( e );
-        } catch ( BiffException e ) {
-            LOG.error( e );
+        } catch ( IOException | BiffException e ) {
+            log.error( e );
+            throw new RuntimeException(  );
         }
-        return  null;
     }
 
     private List<City> fromXML(String pathFile) {
@@ -83,44 +73,36 @@ public class DataFromFile {
             List<City> cities = objectMapper.readValue( xml, new TypeReference<List<City>>() {} );
             return cities;
         } catch ( IOException e ) {
-            LOG.error( e );
+            log.error( e );
+            throw new RuntimeException(  );
         }
-        return null;
     }
 
-    private String inputStreamToString(InputStream is) throws IOException {
-        StringBuilder sb = new StringBuilder();
+    private String inputStreamToString( InputStream is ) throws IOException {
+        StringBuilder builder = new StringBuilder();
         String line;
-        BufferedReader br = new BufferedReader(new InputStreamReader(is));
-        while ((line = br.readLine()) != null) {
-            sb.append(line);
+        BufferedReader reader = new BufferedReader( new InputStreamReader( is ) );
+        while ( ( line = reader.readLine() ) != null ) {
+            builder.append( line );
         }
-        br.close();
-        return sb.toString();
+        reader.close();
+        return builder.toString();
     }
 
-    private List<City> getDataFromExcel(Workbook workbook){
-        List<City> cities = new ArrayList<>(  );
+    private List<City> getDataFromExcel( Workbook workbook ) {
+        List<City> cities = new ArrayList<>();
         Sheet sheet = workbook.getSheet( 0 );
         int rowsCount = sheet.getRows();
-        for(int i = 1; i < rowsCount; i++ ) {
-            cities.add(new City(
+        for ( int i = 1; i < rowsCount; i++ ) {
+            cities.add( new City(
                     sheet.getCell( 0, i ).getContents(),
                     sheet.getCell( 1, i ).getContents(),
                     Double.parseDouble( sheet.getCell( 2, i ).getContents() ),
                     Integer.parseInt( sheet.getCell( 3, i ).getContents() ),
                     Long.parseLong( sheet.getCell( 4, i ).getContents() )
-            ));
+            ) );
         }
         return cities;
-    }
-
-    private String getFileExtension(String filePath) {
-        if(filePath.lastIndexOf(".") != -1 && filePath.lastIndexOf(".") != 0) {
-            return filePath.substring( filePath.lastIndexOf( "." ) + 1 );
-        } else {
-            return null;
-        }
     }
 
 }
