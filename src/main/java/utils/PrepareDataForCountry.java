@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.thoughtworks.xstream.XStream;
 import entity.City;
 import entity.Country;
+import entity.CustomCountry;
 import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
@@ -34,7 +35,7 @@ public class PrepareDataForCountry {
         createCountryFile( filePathOutput, countryList );
     }
 
-    public List<Integer> getRandomCallingCodeListfromExcel( String pathFile ) {
+    private List<Integer> getRandomCallingCodeListfromExcel( String pathFile ) {
         List<Integer> indexList = null;
         Workbook workbook = null;
         try {
@@ -58,7 +59,7 @@ public class PrepareDataForCountry {
         return indexList;
     }
 
-    public List<Country> getCountryDataFromRandomList(List<Integer> indexList){
+    private List<Country> getCountryDataFromRandomList(List<Integer> indexList){
         List<Country> countryList = new ArrayList<>(  );
         Gson gson = new Gson();
         Scanner in = null;
@@ -70,6 +71,7 @@ public class PrepareDataForCountry {
                 in = new Scanner( (InputStream) url.getContent() );
                 Country[] country = gson.fromJson( in.nextLine(), Country[].class );
                 countryList.add( country[0] );
+                log.info( i + " " +  url );
             } catch ( IOException e ) {
                 log.error( e );
             }
@@ -77,7 +79,7 @@ public class PrepareDataForCountry {
         return countryList;
     }
 
-    public void createCountryFile( String filePath, List<Country> countryList )  {
+    private void createCountryFile( String filePath, List<Country> countryList )  {
         WritableWorkbook writableWorkbook = null;
         try {
             writableWorkbook = Workbook.createWorkbook( new File( filePath + File.separator + FILE_NAME + ".xls" ) );
@@ -99,32 +101,60 @@ public class PrepareDataForCountry {
             throws WriteException {
         WritableSheet writableSheet = prepareExcelFile( writableWorkbook );
         int i = 1;
-        for(Country country : countryList){
-            writableSheet.addCell( new Label( 0, i, country.getNumericCode()) );
-            writableSheet.addCell( new Label( 1, i, country.getName()) );
-            writableSheet.addCell( new Label( 2, i, country.getCapital()) );
-            writableSheet.addCell( new Number( 3, i, country.getArea()) );
-            writableSheet.addCell( new Number( 4, i, country.getPopulation()) );
-            writableSheet.addCell( new Label( 5, i, country.getRegion()) );
-            i++;
-        }
+            for ( Country country : countryList ) {
+                writableSheet.addCell( new Label( 0, i, country.getNumericCode() ) );
+                writableSheet.addCell( new Label( 1, i, country.getName() ) );
+                writableSheet.addCell( new Label( 2, i, country.getCapital() ) );
+                writableSheet.addCell( new Number( 3, i, country.getArea() ) );
+                writableSheet.addCell( new Number( 4, i, country.getPopulation() ) );
+                writableSheet.addCell( new Label( 5, i, country.getRegion() ) );
+                i++;
+            }
         return writableWorkbook;
     }
 
     private WritableSheet prepareExcelFile(WritableWorkbook writableWorkbook)
             throws WriteException {
         WritableSheet writableSheet = writableWorkbook.createSheet( "Country", 0 );
-        try {
-            writableSheet.addCell( new Label( 0, 0, "Code" ) );
-            writableSheet.addCell( new Label( 1, 0, "Country" ) );
-            writableSheet.addCell( new Label( 2, 0, "Capital" ) );
-            writableSheet.addCell( new Label( 3, 0, "Area" ) );
-            writableSheet.addCell( new Label( 4, 0, "Population" ) );
-            writableSheet.addCell( new Label( 5, 0, "Region" ) );
-        } catch ( NullPointerException e ) {
-            log.error( e );
-        }
+        writableSheet.addCell( new Label( 0, 0, "Code" ) );
+        writableSheet.addCell( new Label( 1, 0, "Country" ) );
+        writableSheet.addCell( new Label( 2, 0, "Capital" ) );
+        writableSheet.addCell( new Label( 3, 0, "Area" ) );
+        writableSheet.addCell( new Label( 4, 0, "Population" ) );
+        writableSheet.addCell( new Label( 5, 0, "Region" ) );
         return writableSheet;
+    }
+
+    public List<CustomCountry> fromExcel( String pathFile ) {
+        List<CustomCountry> countryList = null;
+        Workbook workbook = null;
+        try {
+            workbook = Workbook.getWorkbook( new File( pathFile ) );
+            countryList = getCountryListFromExcel( workbook );
+            workbook.close();
+            return countryList;
+        } catch ( IOException | BiffException e ) {
+            log.error( e );
+            throw new RuntimeException(  );
+        }
+    }
+
+
+    private List<CustomCountry> getCountryListFromExcel( Workbook workbook ) {
+        List<CustomCountry> countryList = new ArrayList<>();
+        Sheet sheet = workbook.getSheet( 0 );
+        int rowsCount = sheet.getRows();
+        for ( int i = 1; i < rowsCount; i++ ) {
+            countryList.add( new CustomCountry(
+                    Integer.parseInt( sheet.getCell( 0, i ).getContents() ),
+                    sheet.getCell( 1, i ).getContents(),
+                    sheet.getCell( 2, i ).getContents(),
+                    Double.parseDouble( sheet.getCell( 3, i ).getContents() ),
+                    Integer.parseInt( sheet.getCell( 4, i ).getContents() ),
+                    sheet.getCell( 5, i ).getContents()
+            ) );
+        }
+        return countryList;
     }
 
 }
