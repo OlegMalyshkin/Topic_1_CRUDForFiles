@@ -4,40 +4,23 @@ import java.util.List;
 
 public class Country {
 
-    protected String name;
-
+    private String name;
     private List<String> topLevelDomain;
-
-    protected String alpha2Code;
-
+    private String alpha2Code;
     private String alpha3Code;
-
     private List<String> callingCodes;
-
-    protected String capital;
-
+    private String capital;
     private List<String> altSpellings;
-
-    protected String region;
-
-    protected String subregion;
-
-    protected Integer population;
-
+    private String region;
+    private String subregion;
+    private Integer population;
     private List<Double> latlng;
-
     private String demonym;
-
     private Double area;
-
-    protected Double gini;
-
+    private Double gini;
     private List<String> timezones;
-
-    protected List<String> borders;
-
-    protected String nativeName;
-
+    private List<String> borders;
+    private String nativeName;
     private String numericCode;
 
     public String getName() {
