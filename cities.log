@@ -1,3 +1,130 @@
 16/04/2019 - 13:28:39 | INFO  | utils.DataToFile.toJson(DataToFile.java:55) -> toJson() -> File cities.json in folder D:\Documents\IdeaProjects_Data was created
 16/04/2019 - 13:28:39 | INFO  | utils.DataToFile.toXML(DataToFile.java:49) -> toXML() -> File cities.xml in folder D:\Documents\IdeaProjects_Data was created
 16/04/2019 - 13:28:39 | INFO  | utils.DataToFile.toExcel(DataToFile.java:71) -> toExcel() -> File cities.xls in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:19:46 | ERROR | utils.PrepareDataForCountry.getRandomCallingCodeListfromExcel(PrepareDataForCountry.java:33) -> getRandomCallingCodeListfromExcel() -> java.io.FileNotFoundException: D:\Oleg\Projects\Country.xls (The system cannot find the path specified)
+17/04/2019 - 11:20:27 | ERROR | utils.PrepareDataForCountry.getRandomCallingCodeListfromExcel(PrepareDataForCountry.java:33) -> getRandomCallingCodeListfromExcel() -> java.io.FileNotFoundException: D:\Oleg\Projects\Country.xls (The system cannot find the path specified)
+17/04/2019 - 11:21:09 | ERROR | utils.PrepareDataForCountry.getRandomCallingCodeListfromExcel(PrepareDataForCountry.java:33) -> getRandomCallingCodeListfromExcel() -> java.io.FileNotFoundException: D:\Oleg\Projects\Country.xls (The system cannot find the path specified)
+17/04/2019 - 11:21:29 | ERROR | utils.PrepareDataForCountry.getRandomCallingCodeListfromExcel(PrepareDataForCountry.java:33) -> getRandomCallingCodeListfromExcel() -> java.io.FileNotFoundException: D:\Oleg\Projects\CallingCodeList.xls (The system cannot find the path specified)
+17/04/2019 - 11:33:00 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:00 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:01 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:01 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:01 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:01 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:01 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:01 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:02 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:02 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:02 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:02 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:02 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:02 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:02 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:03 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:03 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:03 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:03 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:03 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:03 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:03 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:03 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:04 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:04 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:04 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:04 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:04 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:04 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:04 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:04 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:05 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:05 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:05 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:05 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:05 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:06 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:06 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:06 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:06 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:06 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:06 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:07 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:07 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:07 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:07 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:07 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:07 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:07 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 11:33:08 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:76) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:39 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:40 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:40 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:40 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:40 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:40 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:40 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:40 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:41 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:41 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:41 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:41 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:41 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:41 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:42 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:42 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:42 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:42 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:42 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:42 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:43 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:43 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:43 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:43 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:43 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:43 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:43 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:44 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:44 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:44 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:44 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:44 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:44 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:44 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:45 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:45 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:45 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:45 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:45 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:45 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:45 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:45 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:46 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:46 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:46 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:46 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:46 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:46 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:46 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:17:46 | INFO  | utils.PrepareDataForCountry.toJson(PrepareDataForCountry.java:170) -> toJson() -> File countries.json in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 12:24:42 | ERROR | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:73) -> getCountryDataFromRandomList() -> java.io.FileNotFoundException: https://restcountries.eu/rest/v2/callingcode/441481
+17/04/2019 - 12:25:29 | ERROR | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:73) -> getCountryDataFromRandomList() -> java.io.FileNotFoundException: https://restcountries.eu/rest/v2/callingcode/441534
+17/04/2019 - 12:25:36 | ERROR | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:73) -> getCountryDataFromRandomList() -> java.io.FileNotFoundException: https://restcountries.eu/rest/v2/callingcode/1340
+17/04/2019 - 12:33:01 | ERROR | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:77) -> getCountryDataFromRandomList() -> java.io.FileNotFoundException: https://restcountries.eu/rest/v2/callingcode/1340
+17/04/2019 - 12:34:34 | ERROR | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:77) -> getCountryDataFromRandomList() -> java.io.FileNotFoundException: https://restcountries.eu/rest/v2/callingcode/1340
+17/04/2019 - 12:37:56 | ERROR | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:69) -> getCountryDataFromRandomList() -> java.io.FileNotFoundException: https://restcountries.eu/rest/v2/callingcode/441534
+17/04/2019 - 12:42:40 | ERROR | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:68) -> getCountryDataFromRandomList() -> java.io.FileNotFoundException: https://restcountries.eu/rest/v2/callingcode/441624
+17/04/2019 - 12:42:45 | ERROR | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:68) -> getCountryDataFromRandomList() -> java.io.FileNotFoundException: https://restcountries.eu/rest/v2/callingcode/441534
+17/04/2019 - 12:42:49 | ERROR | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:68) -> getCountryDataFromRandomList() -> java.io.FileNotFoundException: https://restcountries.eu/rest/v2/callingcode/441624
+17/04/2019 - 12:42:51 | ERROR | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:68) -> getCountryDataFromRandomList() -> java.io.FileNotFoundException: https://restcountries.eu/rest/v2/callingcode/1340
+17/04/2019 - 12:43:58 | ERROR | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:68) -> getCountryDataFromRandomList() -> java.io.FileNotFoundException: https://restcountries.eu/rest/v2/callingcode/441624
+17/04/2019 - 12:44:02 | ERROR | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:68) -> getCountryDataFromRandomList() -> java.io.FileNotFoundException: https://restcountries.eu/rest/v2/callingcode/1340
+17/04/2019 - 12:47:36 | ERROR | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:72) -> getCountryDataFromRandomList() -> java.io.FileNotFoundException: https://restcountries.eu/rest/v2/callingcode/441534
+17/04/2019 - 12:49:00 | ERROR | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:72) -> getCountryDataFromRandomList() -> java.io.FileNotFoundException: https://restcountries.eu/rest/v2/callingcode/441624
+17/04/2019 - 13:02:58 | ERROR | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> java.io.FileNotFoundException: https://restcountries.eu/rest/v2/callingcode/1340
+17/04/2019 - 13:03:13 | ERROR | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> java.io.FileNotFoundException: https://restcountries.eu/rest/v2/callingcode/1340
+17/04/2019 - 13:03:14 | ERROR | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> java.io.FileNotFoundException: https://restcountries.eu/rest/v2/callingcode/441534
+17/04/2019 - 13:03:18 | INFO  | utils.PrepareDataForCountry.createCountryFile(PrepareDataForCountry.java:91) -> createCountryFile() -> File countries.xls in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 13:04:30 | ERROR | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> java.io.FileNotFoundException: https://restcountries.eu/rest/v2/callingcode/441534
+17/04/2019 - 13:05:00 | ERROR | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> java.io.FileNotFoundException: https://restcountries.eu/rest/v2/callingcode/1340
+17/04/2019 - 13:11:25 | ERROR | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> java.io.FileNotFoundException: https://restcountries.eu/rest/v2/callingcode/441624
+17/04/2019 - 13:11:27 | ERROR | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> java.io.FileNotFoundException: https://restcountries.eu/rest/v2/callingcode/441481
+17/04/2019 - 13:11:28 | INFO  | utils.PrepareDataForCountry.createCountryFile(PrepareDataForCountry.java:86) -> createCountryFile() -> File countries.xls in folder D:\Documents\IdeaProjects_Data was created

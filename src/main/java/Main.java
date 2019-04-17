@@ -1,4 +1,5 @@
 import entity.City;
+import entity.Country;
 import utils.DataFromFile;
 import utils.DataToFile;
 import utils.PrepareDataForCountry;
@@ -8,6 +9,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
@@ -15,7 +17,7 @@ public class Main {
     public static void main( String[] args ) {
 
         PrepareDataForCountry prepareDataForCountry = new PrepareDataForCountry();
-        prepareDataForCountry.createCountriesJsonFile("D:\\Oleg\\Projects", prepareDataForCountry.fromExcel("D:\\Oleg\\Projects\\Country.xls") );
+        prepareDataForCountry.createCountryFileFromCallingCodeFile("D:\\Documents\\IdeaProjects_Data\\CallingCodeList.xls", "D:\\Documents\\IdeaProjects_Data" );
 
 //        List<City> cities = new ArrayList<City>(  );
 //        cities.add(new City( "Kyiv", "Ukraine", 	847.66, 179,2950533L));

@@ -1,11 +1,17 @@
 package utils;
 
 import com.google.gson.Gson;
+import com.thoughtworks.xstream.XStream;
 import entity.City;
 import entity.Country;
 import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
+import jxl.write.Label;
+import jxl.write.Number;
+import jxl.write.WritableSheet;
+import jxl.write.WritableWorkbook;
+import jxl.write.WriteException;
 import org.apache.log4j.Logger;
 
 import java.io.File;
@@ -20,8 +26,15 @@ public class PrepareDataForCountry {
     private static Logger log = Logger.getLogger( PrepareDataForCountry.class );
     private static final String URL = "https://restcountries.eu/rest/v2/callingcode/";
     private static final String FILE_NAME = "countries";
+    private static final Integer NUMBER_OF_COUNTRY = 50;
 
-    public List<Integer> fromExcel( String pathFile ) {
+    public void createCountryFileFromCallingCodeFile(String filePathInput, String filePathOutput){
+        List<Integer> randomCallingCodeList = getRandomCallingCodeListfromExcel( filePathInput );
+        List<Country> countryList = getCountryDataFromRandomList(randomCallingCodeList);
+        createCountryFile( filePathOutput, countryList );
+    }
+
+    public List<Integer> getRandomCallingCodeListfromExcel( String pathFile ) {
         List<Integer> indexList = null;
         Workbook workbook = null;
         try {
@@ -45,56 +58,73 @@ public class PrepareDataForCountry {
         return indexList;
     }
 
-    public void createCountriesJsonFile(String filePath, List<Integer> indexList){
+    public List<Country> getCountryDataFromRandomList(List<Integer> indexList){
+        List<Country> countryList = new ArrayList<>(  );
+        Gson gson = new Gson();
         Scanner in = null;
         URL url = null;
         Collections.shuffle(indexList);
-        int stepCounter = 0;
-        for(Integer index : indexList) {
-            if(stepCounter > 50) {
-                try {
-                    url = new URL(URL + index);
-                    in = new Scanner((InputStream) url.getContent());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                String result = "";
-                while (in.hasNext()) {
-                    result += in.nextLine();
-                }
-                toJson(filePath, result);
-            } else {
-                break;
-            }
-        }
-//        System.out.println(result);
-//        Gson gson = new Gson();
-//        String s = gson.toJson(result);
-//        Country[] country = gson.fromJson(result, Country[].class);
-//        System.out.println(Arrays.toString(country));
-    }
-
-    public void toJson( String filePath, String jsonCoutry )  {
-        writeToFile(  filePath + File.separator + FILE_NAME + ".json",
-                new Gson().toJson( jsonCoutry ) );
-        log.info( "File " + FILE_NAME + ".json in folder " + filePath + " was created" );
-    }
-
-    private void writeToFile( String filePath, String content) {
-        FileWriter writer = null;
-        try {
-            writer = new FileWriter( filePath, true );
-            writer.write( content );
-        } catch ( IOException e ) {
-            log.error( e );
-        } finally {
+        for ( int i = 0; i < NUMBER_OF_COUNTRY; i++ ) {
             try {
-                writer.flush();
-                writer.close();
+                url = new URL( URL + indexList.get( i ) );
+                in = new Scanner( (InputStream) url.getContent() );
+                Country[] country = gson.fromJson( in.nextLine(), Country[].class );
+                countryList.add( country[0] );
             } catch ( IOException e ) {
                 log.error( e );
             }
         }
+        return countryList;
+    }
+
+    public void createCountryFile( String filePath, List<Country> countryList )  {
+        WritableWorkbook writableWorkbook = null;
+        try {
+            writableWorkbook = Workbook.createWorkbook( new File( filePath + File.separator + FILE_NAME + ".xls" ) );
+            writableWorkbook = prepareDataForExcelFile( writableWorkbook, countryList );
+            writableWorkbook.write();
+            log.info( "File " + FILE_NAME + ".xls in folder " + filePath + " was created" );
+        } catch ( IOException | WriteException e ) {
+            log.error( e );
+        } finally {
+            try {
+                writableWorkbook.close();
+            } catch ( IOException | WriteException e ) {
+                log.error( e );
+            }
+        }
+    }
+
+    private WritableWorkbook prepareDataForExcelFile( WritableWorkbook writableWorkbook, List<Country> countryList)
+            throws WriteException {
+        WritableSheet writableSheet = prepareExcelFile( writableWorkbook );
+        int i = 1;
+        for(Country country : countryList){
+            writableSheet.addCell( new Label( 0, i, country.getNumericCode()) );
+            writableSheet.addCell( new Label( 1, i, country.getName()) );
+            writableSheet.addCell( new Label( 2, i, country.getCapital()) );
+            writableSheet.addCell( new Number( 3, i, country.getArea()) );
+            writableSheet.addCell( new Number( 4, i, country.getPopulation()) );
+            writableSheet.addCell( new Label( 5, i, country.getRegion()) );
+            i++;
+        }
+        return writableWorkbook;
+    }
+
+    private WritableSheet prepareExcelFile(WritableWorkbook writableWorkbook)
+            throws WriteException {
+        WritableSheet writableSheet = writableWorkbook.createSheet( "Country", 0 );
+        try {
+            writableSheet.addCell( new Label( 0, 0, "Code" ) );
+            writableSheet.addCell( new Label( 1, 0, "Country" ) );
+            writableSheet.addCell( new Label( 2, 0, "Capital" ) );
+            writableSheet.addCell( new Label( 3, 0, "Area" ) );
+            writableSheet.addCell( new Label( 4, 0, "Population" ) );
+            writableSheet.addCell( new Label( 5, 0, "Region" ) );
+        } catch ( NullPointerException e ) {
+            log.error( e );
+        }
+        return writableSheet;
     }
 
 }
