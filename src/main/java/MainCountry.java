@@ -1,10 +1,7 @@
-import entity.City;
 import entity.CustomCountry;
-import utils.DataFromFile;
-import utils.DataToFile;
+import utils.CountryUtil;
 import utils.PrepareDataForCountry;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MainCountry {
@@ -14,7 +11,13 @@ public class MainCountry {
         PrepareDataForCountry prepareDataForCountry = new PrepareDataForCountry();
 //        prepareDataForCountry.createCountryFileFromCallingCodeFile("D:\\Documents\\IdeaProjects_Data\\CallingCodeList.xls", "D:\\Documents\\IdeaProjects_Data" );
         List<CustomCountry> countryList = prepareDataForCountry.fromExcel( "D:\\Documents\\IdeaProjects_Data\\countries.xls" );
-        countryList.forEach(country -> System.out.println(country.toString()));
+        CountryUtil countryUtil = new CountryUtil();
+        System.out.println( countryUtil.findNCoutriesWithMaxPopulation( countryList, 5 ) );
+        List<CustomCountry> countryListMaxPopulation = countryUtil.findNCoutriesWithMaxPopulation( countryList, 5 );
+        List<List<CustomCountry>> countriesInOneRegionList = countryUtil.findCountriesInOneRegion( countryListMaxPopulation );
+        List<CustomCountry> countryListMaxAreainOneRegion = countryUtil.findTheBiggestCountryInOneRegion( countriesInOneRegionList );
+        System.out.println( countryListMaxAreainOneRegion );
+        countryUtil.toPDF( "D:\\Documents\\IdeaProjects_Data", countryListMaxAreainOneRegion );
     }
 
 }

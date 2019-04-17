@@ -49,3 +49,4 @@
 17/04/2019 - 13:48:21 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 48 https://restcountries.eu/rest/v2/callingcode/503
 17/04/2019 - 13:48:21 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 49 https://restcountries.eu/rest/v2/callingcode/226
 17/04/2019 - 13:48:21 | INFO  | utils.PrepareDataForCountry.createCountryFile(PrepareDataForCountry.java:88) -> createCountryFile() -> File countries.xls in folder D:\Documents\IdeaProjects_Data was created
+17/04/2019 - 15:33:16 | INFO  | utils.CountryUtil.toPDF(CountryUtil.java:69) -> toPDF() -> File cities.pdf in folder D:\Documents\IdeaProjects_Data was created
