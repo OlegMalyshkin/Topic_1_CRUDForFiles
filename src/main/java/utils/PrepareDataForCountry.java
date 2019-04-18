@@ -36,16 +36,13 @@ public class PrepareDataForCountry {
     }
 
     private List<Integer> getRandomCallingCodeListfromExcel( String pathFile ) {
-        List<Integer> indexList = null;
-        Workbook workbook = null;
         try {
-            workbook = Workbook.getWorkbook( new File( pathFile ) );
-            indexList = getDataFromExcel( workbook );
+            Workbook workbook = Workbook.getWorkbook( new File( pathFile ) );
+            List<Integer> indexList = getDataFromExcel( workbook );
             workbook.close();
             return indexList;
         } catch ( IOException | BiffException e ) {
-            log.error( e );
-            throw new RuntimeException(  );
+            throw new RuntimeException( e );
         }
     }
 
@@ -63,17 +60,18 @@ public class PrepareDataForCountry {
         List<Country> countryList = new ArrayList<>(  );
         Gson gson = new Gson();
         Scanner in = null;
-        URL url = null;
         Collections.shuffle(indexList);
         for ( int i = 0; i < NUMBER_OF_COUNTRY; i++ ) {
             try {
-                url = new URL( URL + indexList.get( i ) );
+                URL url = new URL( URL + indexList.get( i ) );
                 in = new Scanner( (InputStream) url.getContent() );
                 Country[] country = gson.fromJson( in.nextLine(), Country[].class );
                 countryList.add( country[0] );
-                log.info( i + " " +  url );
+                log.info( i + " Make a request " +  url );
             } catch ( IOException e ) {
                 log.error( e );
+            } finally {
+                in.close();
             }
         }
         return countryList;
@@ -126,16 +124,13 @@ public class PrepareDataForCountry {
     }
 
     public List<CustomCountry> fromExcel( String pathFile ) {
-        List<CustomCountry> countryList = null;
-        Workbook workbook = null;
         try {
-            workbook = Workbook.getWorkbook( new File( pathFile ) );
-            countryList = getCountryListFromExcel( workbook );
+            Workbook workbook = Workbook.getWorkbook( new File( pathFile ) );
+            List<CustomCountry> countryList = getCountryListFromExcel( workbook );
             workbook.close();
             return countryList;
         } catch ( IOException | BiffException e ) {
-            log.error( e );
-            throw new RuntimeException(  );
+            throw new RuntimeException( e );
         }
     }
 
