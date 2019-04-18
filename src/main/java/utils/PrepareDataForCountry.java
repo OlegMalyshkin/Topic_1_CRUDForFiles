@@ -60,7 +60,6 @@ public class PrepareDataForCountry {
         List<Country> countryList = new ArrayList<>(  );
         Gson gson = new Gson();
         Scanner in = null;
-        Collections.shuffle(indexList);
         for ( int i = 0; i < NUMBER_OF_COUNTRY; i++ ) {
             try {
                 URL url = new URL( URL + indexList.get( i ) );
