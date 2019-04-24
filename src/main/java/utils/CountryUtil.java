@@ -20,36 +20,34 @@ public class CountryUtil {
     private static final String FILE_NAME = "CountryWithTheLarggestAreainOneRegion";
     private static Logger log = Logger.getLogger( CountryUtil.class );
 
-    public List<CustomCountry> findNCoutriesWithMaxPopulation( List<CustomCountry> countryList, int n ) {
+    public List<CustomCountry> getScoreCoutriesWithMaxPopulation( List<CustomCountry> countryList, int score ) {
         return countryList.stream()
                           .sorted( Comparator.comparing( CustomCountry::getPopulation ).reversed() )
-                          .limit( n )
+                          .limit( score )
                           .collect( Collectors.toList() );
     }
 
-    public List<List<CustomCountry>> findCountriesInOneRegion( List<CustomCountry> countryList ) {
-        Set<String> regionSet = new HashSet<>();
+    public HashMap<String, List<CustomCountry>> getCountriesInOneRegion( List<CustomCountry> countryList ) {
+        HashMap<String, List<CustomCountry>> regionMap = new HashMap<>();
         for ( CustomCountry country : countryList ) {
-            regionSet.add( country.getRegion() );
-        }
-        List regionList = new ArrayList( regionSet );
-        List<List<CustomCountry>> coutryListsByRegion = new ArrayList<>();
-        for ( int i = 0; i < regionList.size(); i++ ) {
-            List<CustomCountry> currentRegionList = new ArrayList<>();
-            for ( CustomCountry country : countryList ) {
-                if ( country.getRegion().equals( regionList.get( i ) ) ) {
-                    currentRegionList.add( country );
-                }
+            String currentRegion = country.getRegion();
+            String countryName = country.getName();
+            if ( regionMap.containsKey( currentRegion ) ) {
+                regionMap.get( currentRegion ).add( country );
+            } else {
+                regionMap.put(
+                        country.getRegion(),
+                        Collections.singletonList( country )
+                );
             }
-            coutryListsByRegion.add( i, currentRegionList );
         }
-        return coutryListsByRegion;
+        return regionMap;
     }
 
-    public List<CustomCountry> findTheBiggestCountryInOneRegion( List<List<CustomCountry>> countryLists ) {
+    public List<CustomCountry> getTheBiggestCountryInOneRegion( HashMap<String, List<CustomCountry>> countryMap ) {
         List<CustomCountry> countryListmaxArea = new ArrayList<>(  );
-        for ( int i = 0; i < countryLists.size(); i++ ) {
-            countryListmaxArea.add( countryLists.get( i ).stream().max( Comparator.comparing( CustomCountry::getArea ) ).get());
+        for ( int i = 0; i < countryMap.size(); i++ ) {
+            countryListmaxArea.add( countryMap.get( i ).stream().max( Comparator.comparing( CustomCountry::getArea ) ).get());
         }
         return countryListmaxArea;
     }

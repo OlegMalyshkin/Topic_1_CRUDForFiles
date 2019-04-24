@@ -2,6 +2,7 @@ import entity.CustomCountry;
 import utils.CountryUtil;
 import utils.PrepareDataForCountry;
 
+import java.util.HashMap;
 import java.util.List;
 
 public class MainCountry {
@@ -13,9 +14,9 @@ public class MainCountry {
         List<CustomCountry> countryList = prepareDataForCountry.fromExcel( "D:\\Documents\\IdeaProjects_Data\\countries.xls" );
 
         CountryUtil countryUtil = new CountryUtil();
-        List<CustomCountry> countryListMaxPopulation = countryUtil.findNCoutriesWithMaxPopulation( countryList, 5 );
-        List<List<CustomCountry>> countriesInOneRegionList = countryUtil.findCountriesInOneRegion( countryListMaxPopulation );
-        List<CustomCountry> countryListMaxAreainOneRegion = countryUtil.findTheBiggestCountryInOneRegion( countriesInOneRegionList );
+        List<CustomCountry> countryListMaxPopulation = countryUtil.getScoreCoutriesWithMaxPopulation( countryList, 5 );
+        HashMap<String, List<CustomCountry>> countriesInOneRegionList = countryUtil.getCountriesInOneRegion( countryListMaxPopulation );
+        List<CustomCountry> countryListMaxAreainOneRegion = countryUtil.getTheBiggestCountryInOneRegion( countriesInOneRegionList );
         countryUtil.toPDF( "D:\\Documents\\IdeaProjects_Data", countryListMaxAreainOneRegion );
         System.out.println(countryUtil.findFirstWithNameWhichIsStartedOnLetter( "A" ,countryList));
         System.out.println(countryUtil.getUniqueRegion(countryList));

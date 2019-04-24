@@ -17,8 +17,6 @@ public class ReadFromFileTestCase {
     private static final String FILE_PATH = "D:\\Documents\\IdeaProjects_Data";
     private static final String FILE_NAME = "cities";
 
-    private DataFromFile dataFromFile;
-
     @BeforeTest
     public void prepareData(){
         DataToFile dataToFile = new DataToFile();
@@ -30,59 +28,43 @@ public class ReadFromFileTestCase {
 
     @Test
     public void checkReadDataFromJson(){
-        dataFromFile = new DataFromFile();
-        List<City> cities = dataFromFile.getCityList( FILE_PATH + File.separator + FILE_NAME + ".json" );
-        assertEquals( Arrays.toString( prepareListForWrite().toArray() ), Arrays.toString( cities.toArray() ) );
+        assertEquals( prepareListForWrite(), new DataFromFile().getCityList( FILE_PATH + File.separator + FILE_NAME + ".json" ));
     }
 
     @Test
     public void checkReadDataFromXML(){
-        dataFromFile = new DataFromFile();
-        List<City> cities = dataFromFile.getCityList( FILE_PATH + File.separator + FILE_NAME + ".xml" );
-        assertEquals( Arrays.toString( prepareListForWrite().toArray() ), Arrays.toString( cities.toArray() ) );
+        assertEquals( prepareListForWrite(), new DataFromFile().getCityList( FILE_PATH + File.separator + FILE_NAME + ".xml" ));
     }
 
     @Test
     public void checkReadDataFromExcel(){
-        dataFromFile = new DataFromFile();
-        List<City> cities = dataFromFile.getCityList( FILE_PATH + File.separator + FILE_NAME + ".xls" );
-        assertEquals( Arrays.toString( prepareListForWrite().toArray() ), Arrays.toString( cities.toArray() ) );
+        assertEquals( prepareListForWrite(), new DataFromFile().getCityList( FILE_PATH + File.separator + FILE_NAME + ".xls" ));
     }
 
 
-    @Test(expectedExceptions = RuntimeException.class)
+    @Test
     public void checkReadDataFromFileWithoutExtension(){
-        dataFromFile = new DataFromFile();
-        List<City> cities = dataFromFile.getCityList( FILE_PATH + File.separator + FILE_NAME );
-        assertEquals( null , cities );
+        assertNull( new DataFromFile().getCityList( FILE_PATH + File.separator + FILE_NAME ));
     }
 
-    @Test(expectedExceptions = RuntimeException.class)
+    @Test
     public void checkReadDataFromFileWithDot(){
-        dataFromFile = new DataFromFile();
-        List<City> cities = dataFromFile.getCityList( FILE_PATH + File.separator + FILE_NAME + "." );
-        assertEquals( null , cities );
+        assertNull( new DataFromFile().getCityList( FILE_PATH + File.separator + FILE_NAME + "." ));
     }
 
-    @Test(expectedExceptions = RuntimeException.class)
+    @Test
     public void checkReadDataFromEmptyFilePath(){
-        dataFromFile = new DataFromFile();
-        List<City> cities = dataFromFile.getCityList("" );
-        assertEquals( null , cities );
+        assertNull( new DataFromFile().getCityList( " " ));
     }
 
-    @Test(expectedExceptions = RuntimeException.class)
+    @Test
     public void checkReadDataFromNullFilePath(){
-        dataFromFile = new DataFromFile();
-        List<City> cities = dataFromFile.getCityList(null );
-        assertEquals( null , cities );
+        assertNull( new DataFromFile().getCityList( null ));
     }
 
-    @Test(expectedExceptions = RuntimeException.class)
+    @Test
     public void checkReadDataFromFilePathWithWrongExtension(){
-        dataFromFile = new DataFromFile();
-        List<City> cities = dataFromFile.getCityList(FILE_PATH + File.separator + FILE_NAME + ".doc"  );
-        assertEquals( null , cities );
+        assertNull( new DataFromFile().getCityList( FILE_PATH + File.separator + FILE_NAME + ".doc" ));
     }
 
     @AfterTest
