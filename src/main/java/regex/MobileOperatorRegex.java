@@ -32,8 +32,7 @@ public class MobileOperatorRegex {
                 mobileOperatorSet.forEach( ( keyList, value ) -> {
                     for ( String operatorCode : keyList ) {
                         if ( operatorCode.equals( matcher.group( 2 ) ) ) {
-                            System.out.println( "Operator " + value + " code " + operatorCode );
-                            log.info( "Operator " + value + " code " + operatorCode  );
+                            log.info( "Operator: '" + value + "' code: (" + operatorCode + ") phone number: " + matcher.group( 3 ) );
                         }
                     }
                 } );
