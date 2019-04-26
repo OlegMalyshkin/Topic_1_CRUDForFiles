@@ -29,7 +29,7 @@ public class DataFromFile {
             case "xls":
                 return fromExcel( filePath );
             default:
-                throw new RuntimeException();
+                throw new RuntimeException("Wrong extension or file doesn't exist");
         }
     }
 

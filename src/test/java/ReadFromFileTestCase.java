@@ -1,78 +1,102 @@
 import entity.City;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import utils.DataFromFile;
 import utils.DataToFile;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import static org.testng.Assert.*;
 
 public class ReadFromFileTestCase {
 
-    private static final String FILE_PATH = "D:\\Documents\\IdeaProjects_Data";
     private static final String FILE_NAME = "cities";
 
-    @BeforeTest
-    public void prepareData(){
+    @Parameters("filepath")
+    @BeforeTest( alwaysRun = true )
+    public void prepareData(String filepath){
         DataToFile dataToFile = new DataToFile();
         List<City> cities = prepareListForWrite();
-        dataToFile.toJson( FILE_PATH, cities );
-        dataToFile.toXML( FILE_PATH, cities );
-        dataToFile.toExcel( FILE_PATH, cities );
+        dataToFile.toJson( filepath, cities );
+        dataToFile.toXML( filepath, cities );
+        dataToFile.toExcel( filepath, cities );
     }
 
-    @Test
-    public void checkReadDataFromJson(){
-        assertEquals( prepareListForWrite(), new DataFromFile().getCityList( FILE_PATH + File.separator + FILE_NAME + ".json" ));
+    @Parameters("filepath")
+    @Test(groups = "positive" )
+    public void checkReadDataFromJson(String filepath){
+        assertEquals( prepareListForWrite(), new DataFromFile().getCityList( filepath + File.separator + FILE_NAME + ".json" ));
     }
 
-    @Test
-    public void checkReadDataFromXML(){
-        assertEquals( prepareListForWrite(), new DataFromFile().getCityList( FILE_PATH + File.separator + FILE_NAME + ".xml" ));
+    @Parameters("filepath")
+    @Test(groups = "positive" )
+    public void checkReadDataFromXML(String filepath){
+        assertEquals( prepareListForWrite(), new DataFromFile().getCityList( filepath + File.separator + FILE_NAME + ".xml" ) );
     }
 
-    @Test
-    public void checkReadDataFromExcel(){
-        assertEquals( prepareListForWrite(), new DataFromFile().getCityList( FILE_PATH + File.separator + FILE_NAME + ".xls" ));
+    @Parameters("filepath")
+    @Test(groups = {"positive", "special"})
+    public void checkReadDataFromExcel(String filepath){
+        assertEquals( prepareListForWrite(), new DataFromFile().getCityList( filepath + File.separator + FILE_NAME + ".xls" ));
     }
 
 
-    @Test
-    public void checkReadDataFromFileWithoutExtension(){
-        assertNull( new DataFromFile().getCityList( FILE_PATH + File.separator + FILE_NAME ));
+    @Parameters("filepath")
+    @Test(groups = "negative" )
+    public void checkReadDataFromFileWithoutExtension(String filepath){
+        try {
+            new DataFromFile().getCityList( filepath + File.separator + FILE_NAME );
+        } catch ( Exception e ){
+            assertEquals( e.getMessage(), "Wrong extension or file doesn't exist" );
+        }
     }
 
-    @Test
-    public void checkReadDataFromFileWithDot(){
-        assertNull( new DataFromFile().getCityList( FILE_PATH + File.separator + FILE_NAME + "." ));
+    @Parameters("filepath")
+    @Test(groups = "negative" )
+    public void checkReadDataFromFileWithDot(String filepath){
+        try {
+            new DataFromFile().getCityList( filepath + File.separator + FILE_NAME + "." );
+        } catch ( Exception e ) {
+            assertEquals( e.getMessage(), "Wrong extension or file doesn't exist" );
+        }
     }
 
-    @Test
+    @Test(groups = {"negative", "special"} )
     public void checkReadDataFromEmptyFilePath(){
-        assertNull( new DataFromFile().getCityList( " " ));
+        try {
+            new DataFromFile().getCityList( " " );
+        } catch ( Exception e ) {
+            assertEquals( e.getMessage(), "Wrong extension or file doesn't exist" );
+        }
     }
 
-    @Test
+    @Test(groups = "negative" )
     public void checkReadDataFromNullFilePath(){
-        assertNull( new DataFromFile().getCityList( null ));
+        try {
+         new DataFromFile().getCityList( null );
+        } catch ( Exception e ) {
+            assertEquals( e.getMessage(), null );
+        }
     }
 
-    @Test
-    public void checkReadDataFromFilePathWithWrongExtension(){
-        assertNull( new DataFromFile().getCityList( FILE_PATH + File.separator + FILE_NAME + ".doc" ));
+    @Parameters("filepath")
+    @Test(groups = "negative" )
+    public void checkReadDataFromFilePathWithWrongExtension(String filepath){
+        try{
+            new DataFromFile().getCityList( filepath + File.separator + FILE_NAME + ".doc" );
+        } catch ( Exception e ) {
+            assertEquals( e.getMessage(), "Wrong extension or file doesn't exist" );
+        }
     }
 
-    @AfterTest
-    public void deleteData(){
+    @Parameters("filepath")
+    @AfterTest( alwaysRun = true )
+    public void deleteData(String filepath){
         String[] files = { "cities.json", "cities.xml", "cities.xls"  };
         File file;
         for(int i = 0; i < 3; i++){
-            file = new File(FILE_PATH + File.separator + files[i] );
+            file = new File(filepath + File.separator + files[i] );
             file.delete();
         }
     }

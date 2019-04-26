@@ -1,5 +1,7 @@
 package entity;
 
+import java.util.Objects;
+
 public class City {
 
     private String name;
@@ -73,5 +75,26 @@ public class City {
                 ", elevation=" + elevation +
                 ", population=" + population +
                 '}';
+    }
+
+    @Override
+    public boolean equals( Object o ) {
+        if ( this == o ) {
+            return true;
+        }
+        if ( o == null || getClass() != o.getClass() ) {
+            return false;
+        }
+        City city = (City) o;
+        return Objects.equals( name, city.name ) &&
+                Objects.equals( country, city.country ) &&
+                Objects.equals( area, city.area ) &&
+                Objects.equals( elevation, city.elevation ) &&
+                Objects.equals( population, city.population );
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash( name, country, area, elevation, population );
     }
 }

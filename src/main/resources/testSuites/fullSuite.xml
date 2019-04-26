@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Full TestSuite"  verbose="1">
+    <!--<suite-files>-->
+        <!--<suite-file path="./negativeTestSuite.xml" />-->
+        <!--<suite-file path="./positiveTestSuite.xml" />-->
+    <!--</suite-files>-->
+    <parameter name="filepath" value="D:\Documents\IdeaProjects_Data" />
+    <test name="full TestCase">
+        <classes>
+            <class name="ReadFromFileTestCase"/>
+        </classes>
+    </test>
+</suite>

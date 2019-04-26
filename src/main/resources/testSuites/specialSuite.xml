@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Special TestSuite"  verbose="1">
+    <groups>
+        <run>
+            <include name="special"  />
+        </run>
+    </groups>
+    <parameter name="filepath" value="D:\Documents\IdeaProjects_Data" />
+    <test name="Special TestCase">
+        <classes>
+            <class name="ReadFromFileTestCase"/>
+        </classes>
+    </test>
+</suite>

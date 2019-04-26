@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Positive TestSuite"  verbose="1" parallel="false">
+    <groups>
+        <run>
+            <include name="positive"  />
+        </run>
+    </groups>
+    <parameter name="filepath" value="D:\Documents\IdeaProjects_Data" />
+    <test name="Positive TestCase">
+        <classes>
+            <class name="ReadFromFileTestCase"/>
+        </classes>
+    </test>
+</suite>
