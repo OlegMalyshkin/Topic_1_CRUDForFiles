@@ -11,7 +11,6 @@ import java.util.List;
 
 import static org.testng.Assert.*;
 
-@Listeners( LogListener.class )
 public class ReadFromFileTestCase {
 
     private static final String FILE_NAME = "cities";

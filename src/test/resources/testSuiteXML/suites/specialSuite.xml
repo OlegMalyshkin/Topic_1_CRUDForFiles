@@ -6,6 +6,9 @@
             <include name="special"  />
         </run>
     </groups>
+    <listeners>
+        <listener class-name="listeners.LogListener" />
+    </listeners>
     <parameter name="filepath" value="D:\Documents\IdeaProjects_Data" />
     <test name="Special TestCase">
         <classes>
