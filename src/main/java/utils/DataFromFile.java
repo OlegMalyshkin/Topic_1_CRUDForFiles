@@ -53,11 +53,9 @@ public class DataFromFile {
     }
 
     private List<City> fromExcel( String pathFile ) {
-        List<City> cities = null;
-        Workbook workbook = null;
         try {
-            workbook = Workbook.getWorkbook( new File( pathFile ) );
-            cities = getDataFromExcel( workbook );
+            Workbook workbook = Workbook.getWorkbook( new File( pathFile ) );
+            List<City> cities = getDataFromExcel( workbook );
             workbook.close();
             return cities;
         } catch ( IOException | BiffException e ) {

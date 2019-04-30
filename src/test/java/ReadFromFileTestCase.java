@@ -1,4 +1,6 @@
 import entity.City;
+import listeners.LogListener;
+import org.apache.log4j.Logger;
 import org.testng.annotations.*;
 import utils.DataFromFile;
 import utils.DataToFile;
@@ -9,9 +11,11 @@ import java.util.List;
 
 import static org.testng.Assert.*;
 
+@Listeners( LogListener.class )
 public class ReadFromFileTestCase {
 
     private static final String FILE_NAME = "cities";
+    private static Logger log = Logger.getLogger( ReadFromFileTestCase.class );
 
     @Parameters("filepath")
     @BeforeTest( alwaysRun = true )
@@ -98,6 +102,7 @@ public class ReadFromFileTestCase {
         for(int i = 0; i < 3; i++){
             file = new File(filepath + File.separator + files[i] );
             file.delete();
+            log.info( "File " + files[i] + " in folder " + filepath + " was deleted" );
         }
     }
 

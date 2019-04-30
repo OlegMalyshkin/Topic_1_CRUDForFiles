@@ -1,53 +1,44 @@
-17/04/2019 - 13:48:13 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 0 https://restcountries.eu/rest/v2/callingcode/98
-17/04/2019 - 13:48:13 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 1 https://restcountries.eu/rest/v2/callingcode/387
-17/04/2019 - 13:48:14 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 2 https://restcountries.eu/rest/v2/callingcode/1473
-17/04/2019 - 13:48:14 | ERROR | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:76) -> getCountryDataFromRandomList() -> java.io.FileNotFoundException: https://restcountries.eu/rest/v2/callingcode/441481
-17/04/2019 - 13:48:14 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 4 https://restcountries.eu/rest/v2/callingcode/675
-17/04/2019 - 13:48:14 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 5 https://restcountries.eu/rest/v2/callingcode/357
-17/04/2019 - 13:48:14 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 6 https://restcountries.eu/rest/v2/callingcode/352
-17/04/2019 - 13:48:15 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 7 https://restcountries.eu/rest/v2/callingcode/220
-17/04/2019 - 13:48:15 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 8 https://restcountries.eu/rest/v2/callingcode/30
-17/04/2019 - 13:48:15 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 9 https://restcountries.eu/rest/v2/callingcode/33
-17/04/2019 - 13:48:15 | ERROR | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:76) -> getCountryDataFromRandomList() -> java.io.FileNotFoundException: https://restcountries.eu/rest/v2/callingcode/1340
-17/04/2019 - 13:48:15 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 11 https://restcountries.eu/rest/v2/callingcode/351
-17/04/2019 - 13:48:16 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 12 https://restcountries.eu/rest/v2/callingcode/501
-17/04/2019 - 13:48:16 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 13 https://restcountries.eu/rest/v2/callingcode/962
-17/04/2019 - 13:48:16 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 14 https://restcountries.eu/rest/v2/callingcode/239
-17/04/2019 - 13:48:16 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 15 https://restcountries.eu/rest/v2/callingcode/236
-17/04/2019 - 13:48:16 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 16 https://restcountries.eu/rest/v2/callingcode/7
-17/04/2019 - 13:48:16 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 17 https://restcountries.eu/rest/v2/callingcode/36
-17/04/2019 - 13:48:17 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 18 https://restcountries.eu/rest/v2/callingcode/39
-17/04/2019 - 13:48:17 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 19 https://restcountries.eu/rest/v2/callingcode/506
-17/04/2019 - 13:48:17 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 20 https://restcountries.eu/rest/v2/callingcode/687
-17/04/2019 - 13:48:17 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 21 https://restcountries.eu/rest/v2/callingcode/686
-17/04/2019 - 13:48:17 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 22 https://restcountries.eu/rest/v2/callingcode/61
-17/04/2019 - 13:48:17 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 23 https://restcountries.eu/rest/v2/callingcode/212
-17/04/2019 - 13:48:17 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 24 https://restcountries.eu/rest/v2/callingcode/212
-17/04/2019 - 13:48:18 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 25 https://restcountries.eu/rest/v2/callingcode/963
-17/04/2019 - 13:48:18 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 26 https://restcountries.eu/rest/v2/callingcode/41
-17/04/2019 - 13:48:18 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 27 https://restcountries.eu/rest/v2/callingcode/688
-17/04/2019 - 13:48:18 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 28 https://restcountries.eu/rest/v2/callingcode/264
-17/04/2019 - 13:48:18 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 29 https://restcountries.eu/rest/v2/callingcode/591
-17/04/2019 - 13:48:18 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 30 https://restcountries.eu/rest/v2/callingcode/55
-17/04/2019 - 13:48:18 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 31 https://restcountries.eu/rest/v2/callingcode/91
-17/04/2019 - 13:48:18 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 32 https://restcountries.eu/rest/v2/callingcode/213
-17/04/2019 - 13:48:19 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 33 https://restcountries.eu/rest/v2/callingcode/231
-17/04/2019 - 13:48:19 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 34 https://restcountries.eu/rest/v2/callingcode/507
-17/04/2019 - 13:48:19 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 35 https://restcountries.eu/rest/v2/callingcode/86
-17/04/2019 - 13:48:19 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 36 https://restcountries.eu/rest/v2/callingcode/44
-17/04/2019 - 13:48:19 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 37 https://restcountries.eu/rest/v2/callingcode/964
-17/04/2019 - 13:48:19 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 38 https://restcountries.eu/rest/v2/callingcode/232
-17/04/2019 - 13:48:19 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 39 https://restcountries.eu/rest/v2/callingcode/90
-17/04/2019 - 13:48:19 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 40 https://restcountries.eu/rest/v2/callingcode/421
-17/04/2019 - 13:48:20 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 41 https://restcountries.eu/rest/v2/callingcode/254
-17/04/2019 - 13:48:20 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 42 https://restcountries.eu/rest/v2/callingcode/230
-17/04/2019 - 13:48:20 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 43 https://restcountries.eu/rest/v2/callingcode/508
-17/04/2019 - 13:48:20 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 44 https://restcountries.eu/rest/v2/callingcode/263
-17/04/2019 - 13:48:20 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 45 https://restcountries.eu/rest/v2/callingcode/256
-17/04/2019 - 13:48:20 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 46 https://restcountries.eu/rest/v2/callingcode/998
-17/04/2019 - 13:48:21 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 47 https://restcountries.eu/rest/v2/callingcode/1876
-17/04/2019 - 13:48:21 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 48 https://restcountries.eu/rest/v2/callingcode/503
-17/04/2019 - 13:48:21 | INFO  | utils.PrepareDataForCountry.getCountryDataFromRandomList(PrepareDataForCountry.java:74) -> getCountryDataFromRandomList() -> 49 https://restcountries.eu/rest/v2/callingcode/226
-17/04/2019 - 13:48:21 | INFO  | utils.PrepareDataForCountry.createCountryFile(PrepareDataForCountry.java:88) -> createCountryFile() -> File countries.xls in folder D:\Documents\IdeaProjects_Data was created
-17/04/2019 - 15:33:16 | INFO  | utils.CountryUtil.toPDF(CountryUtil.java:69) -> toPDF() -> File cities.pdf in folder D:\Documents\IdeaProjects_Data was created
-17/04/2019 - 16:04:03 | INFO  | utils.CountryUtil.toPDF(CountryUtil.java:68) -> toPDF() -> File cities.pdf in folder D:\Documents\IdeaProjects_Data was created
+30/04/2019 - 14:08:48 | INFO  | listeners.LogListener.onStart(LogListener.java:27) -> onStart() -> About to begin executing Suite Full TestSuite
+30/04/2019 - 14:08:48 | INFO  | listeners.LogListener.beforeInvocation(LogListener.java:12) -> beforeInvocation() -> About to begin executing ReadFromFileTestCase.prepareData
+30/04/2019 - 14:08:48 | INFO  | utils.DataToFile.toJson(DataToFile.java:55) -> toJson() -> File cities.json in folder D:\Documents\IdeaProjects_Data was created
+30/04/2019 - 14:08:49 | INFO  | utils.DataToFile.toXML(DataToFile.java:49) -> toXML() -> File cities.xml in folder D:\Documents\IdeaProjects_Data was created
+30/04/2019 - 14:08:49 | INFO  | utils.DataToFile.toExcel(DataToFile.java:71) -> toExcel() -> File cities.xls in folder D:\Documents\IdeaProjects_Data was created
+30/04/2019 - 14:08:49 | INFO  | listeners.LogListener.afterInvocation(LogListener.java:17) -> afterInvocation() -> Completed executing ReadFromFileTestCase.prepareData
+30/04/2019 - 14:08:49 | INFO  | listeners.LogListener.beforeInvocation(LogListener.java:12) -> beforeInvocation() -> About to begin executing ReadFromFileTestCase.checkReadDataFromEmptyFilePath
+30/04/2019 - 14:08:49 | INFO  | listeners.LogListener.afterInvocation(LogListener.java:17) -> afterInvocation() -> Completed executing ReadFromFileTestCase.checkReadDataFromEmptyFilePath
+30/04/2019 - 14:08:49 | INFO  | listeners.LogListener.beforeInvocation(LogListener.java:12) -> beforeInvocation() -> About to begin executing ReadFromFileTestCase.checkReadDataFromExcel
+30/04/2019 - 14:08:49 | INFO  | listeners.LogListener.afterInvocation(LogListener.java:17) -> afterInvocation() -> Completed executing ReadFromFileTestCase.checkReadDataFromExcel
+30/04/2019 - 14:08:49 | INFO  | listeners.LogListener.beforeInvocation(LogListener.java:12) -> beforeInvocation() -> About to begin executing ReadFromFileTestCase.checkReadDataFromFilePathWithWrongExtension
+30/04/2019 - 14:08:49 | INFO  | listeners.LogListener.afterInvocation(LogListener.java:17) -> afterInvocation() -> Completed executing ReadFromFileTestCase.checkReadDataFromFilePathWithWrongExtension
+30/04/2019 - 14:08:49 | INFO  | listeners.LogListener.beforeInvocation(LogListener.java:12) -> beforeInvocation() -> About to begin executing ReadFromFileTestCase.checkReadDataFromFileWithDot
+30/04/2019 - 14:08:49 | INFO  | listeners.LogListener.afterInvocation(LogListener.java:17) -> afterInvocation() -> Completed executing ReadFromFileTestCase.checkReadDataFromFileWithDot
+30/04/2019 - 14:08:49 | INFO  | listeners.LogListener.beforeInvocation(LogListener.java:12) -> beforeInvocation() -> About to begin executing ReadFromFileTestCase.checkReadDataFromFileWithoutExtension
+30/04/2019 - 14:08:49 | INFO  | listeners.LogListener.afterInvocation(LogListener.java:17) -> afterInvocation() -> Completed executing ReadFromFileTestCase.checkReadDataFromFileWithoutExtension
+30/04/2019 - 14:08:49 | INFO  | listeners.LogListener.beforeInvocation(LogListener.java:12) -> beforeInvocation() -> About to begin executing ReadFromFileTestCase.checkReadDataFromJson
+30/04/2019 - 14:08:49 | INFO  | listeners.LogListener.afterInvocation(LogListener.java:17) -> afterInvocation() -> Completed executing ReadFromFileTestCase.checkReadDataFromJson
+30/04/2019 - 14:08:49 | INFO  | listeners.LogListener.beforeInvocation(LogListener.java:12) -> beforeInvocation() -> About to begin executing ReadFromFileTestCase.checkReadDataFromNullFilePath
+30/04/2019 - 14:08:49 | INFO  | listeners.LogListener.afterInvocation(LogListener.java:17) -> afterInvocation() -> Completed executing ReadFromFileTestCase.checkReadDataFromNullFilePath
+30/04/2019 - 14:08:49 | INFO  | listeners.LogListener.beforeInvocation(LogListener.java:12) -> beforeInvocation() -> About to begin executing ReadFromFileTestCase.checkReadDataFromXML
+30/04/2019 - 14:08:49 | INFO  | listeners.LogListener.afterInvocation(LogListener.java:17) -> afterInvocation() -> Completed executing ReadFromFileTestCase.checkReadDataFromXML
+30/04/2019 - 14:08:49 | INFO  | listeners.LogListener.beforeInvocation(LogListener.java:12) -> beforeInvocation() -> About to begin executing ReadFromFileTestCase.deleteData
+30/04/2019 - 14:08:49 | INFO  | ReadFromFileTestCase.deleteData(ReadFromFileTestCase.java:105) -> deleteData() -> File cities.json in folder D:\Documents\IdeaProjects_Data was deleted
+30/04/2019 - 14:08:49 | INFO  | ReadFromFileTestCase.deleteData(ReadFromFileTestCase.java:105) -> deleteData() -> File cities.xml in folder D:\Documents\IdeaProjects_Data was deleted
+30/04/2019 - 14:08:49 | INFO  | ReadFromFileTestCase.deleteData(ReadFromFileTestCase.java:105) -> deleteData() -> File cities.xls in folder D:\Documents\IdeaProjects_Data was deleted
+30/04/2019 - 14:08:49 | INFO  | listeners.LogListener.afterInvocation(LogListener.java:17) -> afterInvocation() -> Completed executing ReadFromFileTestCase.deleteData
+30/04/2019 - 14:08:49 | INFO  | listeners.LogListener.onFinish(LogListener.java:32) -> onFinish() -> About to end executing Suite Full TestSuite
+30/04/2019 - 14:09:25 | INFO  | listeners.LogListener.onStart(LogListener.java:27) -> onStart() -> About to begin executing Suite Special TestSuite
+30/04/2019 - 14:09:25 | INFO  | listeners.LogListener.beforeInvocation(LogListener.java:12) -> beforeInvocation() -> About to begin executing ReadFromFileTestCase.prepareData
+30/04/2019 - 14:09:25 | INFO  | utils.DataToFile.toJson(DataToFile.java:55) -> toJson() -> File cities.json in folder D:\Documents\IdeaProjects_Data was created
+30/04/2019 - 14:09:25 | INFO  | utils.DataToFile.toXML(DataToFile.java:49) -> toXML() -> File cities.xml in folder D:\Documents\IdeaProjects_Data was created
+30/04/2019 - 14:09:25 | INFO  | utils.DataToFile.toExcel(DataToFile.java:71) -> toExcel() -> File cities.xls in folder D:\Documents\IdeaProjects_Data was created
+30/04/2019 - 14:09:25 | INFO  | listeners.LogListener.afterInvocation(LogListener.java:17) -> afterInvocation() -> Completed executing ReadFromFileTestCase.prepareData
+30/04/2019 - 14:09:25 | INFO  | listeners.LogListener.beforeInvocation(LogListener.java:12) -> beforeInvocation() -> About to begin executing ReadFromFileTestCase.checkReadDataFromEmptyFilePath
+30/04/2019 - 14:09:25 | INFO  | listeners.LogListener.afterInvocation(LogListener.java:17) -> afterInvocation() -> Completed executing ReadFromFileTestCase.checkReadDataFromEmptyFilePath
+30/04/2019 - 14:09:25 | INFO  | listeners.LogListener.beforeInvocation(LogListener.java:12) -> beforeInvocation() -> About to begin executing ReadFromFileTestCase.checkReadDataFromExcel
+30/04/2019 - 14:09:26 | INFO  | listeners.LogListener.afterInvocation(LogListener.java:17) -> afterInvocation() -> Completed executing ReadFromFileTestCase.checkReadDataFromExcel
+30/04/2019 - 14:09:26 | INFO  | listeners.LogListener.beforeInvocation(LogListener.java:12) -> beforeInvocation() -> About to begin executing ReadFromFileTestCase.deleteData
+30/04/2019 - 14:09:26 | INFO  | ReadFromFileTestCase.deleteData(ReadFromFileTestCase.java:105) -> deleteData() -> File cities.json in folder D:\Documents\IdeaProjects_Data was deleted
+30/04/2019 - 14:09:26 | INFO  | ReadFromFileTestCase.deleteData(ReadFromFileTestCase.java:105) -> deleteData() -> File cities.xml in folder D:\Documents\IdeaProjects_Data was deleted
+30/04/2019 - 14:09:26 | INFO  | ReadFromFileTestCase.deleteData(ReadFromFileTestCase.java:105) -> deleteData() -> File cities.xls in folder D:\Documents\IdeaProjects_Data was deleted
+30/04/2019 - 14:09:26 | INFO  | listeners.LogListener.afterInvocation(LogListener.java:17) -> afterInvocation() -> Completed executing ReadFromFileTestCase.deleteData
+30/04/2019 - 14:09:26 | INFO  | listeners.LogListener.onFinish(LogListener.java:32) -> onFinish() -> About to end executing Suite Special TestSuite
